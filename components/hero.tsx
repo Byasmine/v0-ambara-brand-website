@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
+import { ArrowRight } from 'lucide-react';
 
 export function Hero() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -11,7 +12,7 @@ export function Hero() {
   }, []);
 
   return (
-    <section className="relative min-h-screen overflow-hidden bg-gradient-to-br from-background via-beige to-background">
+    <section className="relative min-h-screen overflow-hidden bg-gradient-to-b from-white via-beige-light to-background pt-24">
       {/* Decorative background elements with animation */}
       <div className="absolute inset-0 overflow-hidden">
         <div className={`absolute -right-32 -top-32 h-64 w-64 rounded-full bg-gold/10 blur-3xl transition-all duration-1000 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}></div>
@@ -37,11 +38,15 @@ export function Hero() {
             </div>
 
             <div className={`flex flex-col gap-4 sm:flex-row transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-              <button className="rounded-lg bg-gold px-8 py-3 text-base font-semibold text-foreground shadow-lg transition-all hover:bg-gold-dark hover:shadow-xl hover:scale-105 active:scale-95">
-                Découvrir nos produits
+              <button className="group relative inline-flex items-center gap-3 rounded-full bg-gold px-8 py-3 text-base font-semibold text-foreground shadow-lg transition-all hover:shadow-2xl hover:bg-gold-dark active:scale-95">
+                <span>Découvrir nos produits</span>
+                <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
               </button>
-              <button className="rounded-lg border-2 border-gold px-8 py-3 text-base font-semibold text-gold transition-all hover:bg-gold/5 hover:scale-105 active:scale-95">
-                En savoir plus
+              <button className="group relative rounded-full border-2 border-gold bg-transparent px-8 py-3 text-base font-semibold text-gold transition-all hover:bg-gold/10 hover:border-gold-dark active:scale-95">
+                <span className="flex items-center gap-2">
+                  En savoir plus
+                  <span className="transition-transform duration-300 group-hover:translate-x-1">↓</span>
+                </span>
               </button>
             </div>
 
