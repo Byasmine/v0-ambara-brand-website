@@ -1,0 +1,136 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* AMBARA Brand Colors */
+  /* Gold/Amber - Signature brand color */
+  --gold: #D4AF37;
+  --gold-dark: #B8860B;
+  /* Beige/Cream - Minimalist background */
+  --beige: #F5E6D3;
+  --beige-light: #FAF4ED;
+  /* Brown/Warm Brown - Structure and contrast */
+  --brown: #6B4423;
+  --brown-light: #8B5A3C;
+  
+  --background: #FAF4ED;
+  --foreground: #6B4423;
+  --card: #FFFFFF;
+  --card-foreground: #6B4423;
+  --popover: #FFFFFF;
+  --popover-foreground: #6B4423;
+  --primary: #D4AF37;
+  --primary-foreground: #6B4423;
+  --secondary: #F5E6D3;
+  --secondary-foreground: #6B4423;
+  --muted: #E8D5B8;
+  --muted-foreground: #8B5A3C;
+  --accent: #D4AF37;
+  --accent-foreground: #FFFFFF;
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.577 0.245 27.325);
+  --border: #E8D5B8;
+  --input: #FFFFFF;
+  --ring: #D4AF37;
+  --chart-1: #D4AF37;
+  --chart-2: #8B5A3C;
+  --chart-3: #F5E6D3;
+  --chart-4: #6B4423;
+  --chart-5: #B8860B;
+  --radius: 0.625rem;
+  --sidebar: #FAF4ED;
+  --sidebar-foreground: #6B4423;
+  --sidebar-primary: #D4AF37;
+  --sidebar-primary-foreground: #6B4423;
+  --sidebar-accent: #6B4423;
+  --sidebar-accent-foreground: #FFFFFF;
+  --sidebar-border: #E8D5B8;
+  --sidebar-ring: #D4AF37;
+}
+
+.dark {
+  --background: #2A1810;
+  --foreground: #FAF4ED;
+  --card: #3D2817;
+  --card-foreground: #FAF4ED;
+  --popover: #3D2817;
+  --popover-foreground: #FAF4ED;
+  --primary: #D4AF37;
+  --primary-foreground: #2A1810;
+  --secondary: #6B4423;
+  --secondary-foreground: #FAF4ED;
+  --muted: #6B4423;
+  --muted-foreground: #C4A574;
+  --accent: #D4AF37;
+  --accent-foreground: #2A1810;
+  --destructive: oklch(0.396 0.141 25.723);
+  --destructive-foreground: oklch(0.637 0.237 25.331);
+  --border: #6B4423;
+  --input: #3D2817;
+  --ring: #D4AF37;
+  --chart-1: #D4AF37;
+  --chart-2: #8B5A3C;
+  --chart-3: #C4A574;
+  --chart-4: #B8860B;
+  --chart-5: #6B4423;
+  --sidebar: #2A1810;
+  --sidebar-foreground: #FAF4ED;
+  --sidebar-primary: #D4AF37;
+  --sidebar-primary-foreground: #2A1810;
+  --sidebar-accent: #6B4423;
+  --sidebar-accent-foreground: #FAF4ED;
+  --sidebar-border: #6B4423;
+  --sidebar-ring: #D4AF37;
+}
+
+@theme inline {
+  --font-sans: 'Geist', 'Geist Fallback';
+  --font-mono: 'Geist Mono', 'Geist Mono Fallback';
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
