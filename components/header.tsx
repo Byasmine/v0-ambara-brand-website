@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { Menu, X, MessageCircle } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import Image from 'next/image';
 
 export function Header() {
@@ -45,20 +45,16 @@ export function Header() {
           </Link>
         </div>
 
-        {/* CTA Buttons */}
-        <div className="hidden items-center gap-3 md:flex">
+        {/* CTA Button */}
+        <div className="hidden md:block">
           <a
             href={whatsappLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 rounded-lg bg-[#25D366] px-4 py-2 text-sm font-semibold text-white transition-all hover:bg-[#20BA5A] hover:shadow-lg"
+            className="rounded-lg bg-gold px-6 py-2 text-sm font-semibold text-foreground transition-all hover:bg-gold-dark hover:shadow-lg active:scale-95"
           >
-            <MessageCircle className="h-4 w-4" />
-            WhatsApp
-          </a>
-          <button className="rounded-lg bg-gold px-6 py-2 text-sm font-semibold text-foreground transition-all hover:bg-gold-dark hover:shadow-lg active:scale-95">
             Commander
-          </button>
+          </a>
         </div>
 
         {/* Mobile Menu Button */}
@@ -95,14 +91,10 @@ export function Header() {
               href={whatsappLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex w-full items-center justify-center gap-2 rounded-lg bg-[#25D366] py-2 text-sm font-semibold text-white transition-all hover:bg-[#20BA5A]"
+              className="w-full rounded-lg bg-gold py-2 text-center text-sm font-semibold text-foreground transition-all hover:bg-gold-dark active:scale-95"
             >
-              <MessageCircle className="h-4 w-4" />
-              WhatsApp
-            </a>
-            <button className="w-full rounded-lg bg-gold py-2 text-sm font-semibold text-foreground transition-all hover:bg-gold-dark active:scale-95">
               Commander
-            </button>
+            </a>
           </div>
         </div>
       )}

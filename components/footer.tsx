@@ -82,18 +82,24 @@ export function Footer() {
             <div className="space-y-3">
               <p className="text-sm text-gray-300">Retrouvez-nous sur les réseaux</p>
               <div className="flex gap-4">
-                <Link href="#" aria-label="Facebook" className="transition-colors hover:text-gold">
-                  <Facebook className="h-5 w-5" />
-                </Link>
-                <Link href="#" aria-label="Instagram" className="transition-colors hover:text-gold">
+                <a
+                  href="https://www.instagram.com/ambara.officiel1?igsh=MnN5M2w1OThrcGZ0"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram"
+                  className="transition-colors hover:text-gold"
+                >
                   <Instagram className="h-5 w-5" />
-                </Link>
-                <Link href="#" aria-label="TikTok" className="transition-colors hover:text-gold">
+                </a>
+                <a
+                  href="https://www.tiktok.com/@ambara.official1?_r=1&_t=ZS-96pUDMop3GU"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="TikTok"
+                  className="transition-colors hover:text-gold"
+                >
                   <Music className="h-5 w-5" />
-                </Link>
-                <Link href="#" aria-label="Website" className="transition-colors hover:text-gold">
-                  <Globe className="h-5 w-5" />
-                </Link>
+                </a>
               </div>
             </div>
           </div>
