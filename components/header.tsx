@@ -21,18 +21,18 @@ export function Header() {
   return (
     <header className={`sticky top-0 z-50 transition-all duration-300 ${
       isScrolled 
-        ? 'border-b border-gold/20 bg-white/95 backdrop-blur-md shadow-lg' 
-        : 'border-b border-gold/10 bg-white/80 backdrop-blur-md'
+        ? 'border-b border-white/20 bg-white/40 backdrop-blur-xl shadow-xl' 
+        : 'border-b border-white/20 bg-white/30 backdrop-blur-xl'
     }`}>
-      <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+      <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
         {/* Logo */}
         <Link href="/" className="group flex-shrink-0 transition-transform duration-300 hover:scale-105 active:scale-95">
-          <div className="relative h-16 w-auto">
+          <div className="relative h-12 w-auto">
             <Image
               src="/ambara-logo.png"
               alt="AMBARA Logo"
-              height={64}
-              width={180}
+              height={48}
+              width={140}
               className="h-full w-auto object-contain"
               priority
             />
@@ -40,7 +40,7 @@ export function Header() {
         </Link>
 
         {/* Desktop Menu */}
-        <div className="hidden flex-1 items-center justify-center gap-12 md:flex">
+        <div className="hidden flex-1 items-center justify-center gap-10 md:flex">
           <Link 
             href="#produits" 
             className="group relative text-sm font-medium text-foreground transition-colors"
@@ -77,7 +77,7 @@ export function Header() {
             href={whatsappLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="group relative inline-flex items-center gap-2 rounded-full bg-gold px-7 py-2.5 text-sm font-semibold text-foreground shadow-md transition-all duration-300 hover:shadow-xl hover:bg-gold-dark active:scale-95"
+            className="group relative inline-flex items-center gap-2 rounded-full bg-gold px-6 py-2 text-sm font-semibold text-foreground shadow-md transition-all duration-300 hover:shadow-lg hover:bg-gold-dark active:scale-95"
           >
             <span>Commander</span>
             <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
@@ -99,26 +99,26 @@ export function Header() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="border-t border-gold/10 bg-white/95 backdrop-blur-md px-4 py-6 md:hidden animate-in fade-in slide-in-from-top-2 duration-300">
-          <div className="flex flex-col gap-4 space-y-2">
-            <Link href="#produits" className="px-4 py-2 text-sm font-medium text-foreground hover:text-gold transition-colors">
+        <div className="border-t border-white/20 bg-white/30 backdrop-blur-xl px-4 py-3 md:hidden animate-in fade-in slide-in-from-top-2 duration-300">
+          <div className="flex flex-col gap-1">
+            <Link href="#produits" className="px-3 py-1.5 text-sm font-medium text-foreground hover:text-gold transition-colors">
               Produits
             </Link>
-            <Link href="#bien-etre" className="px-4 py-2 text-sm font-medium text-foreground hover:text-gold transition-colors">
+            <Link href="#bien-etre" className="px-3 py-1.5 text-sm font-medium text-foreground hover:text-gold transition-colors">
               Bien-être
             </Link>
-            <Link href="#histoire" className="px-4 py-2 text-sm font-medium text-foreground hover:text-gold transition-colors">
+            <Link href="#histoire" className="px-3 py-1.5 text-sm font-medium text-foreground hover:text-gold transition-colors">
               Notre Histoire
             </Link>
-            <Link href="#contact" className="px-4 py-2 text-sm font-medium text-foreground hover:text-gold transition-colors">
+            <Link href="#contact" className="px-3 py-1.5 text-sm font-medium text-foreground hover:text-gold transition-colors">
               Contact
             </Link>
-            <div className="my-2 h-px bg-gold/20"></div>
+            <div className="my-1.5 h-px bg-gold/20"></div>
             <a
               href={whatsappLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full rounded-full bg-gold px-6 py-2.5 text-center text-sm font-semibold text-foreground transition-all hover:bg-gold-dark active:scale-95"
+              className="w-full rounded-full bg-gold px-4 py-2 text-center text-sm font-semibold text-foreground transition-all hover:bg-gold-dark active:scale-95"
             >
               Commander
             </a>
